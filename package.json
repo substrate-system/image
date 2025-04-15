@@ -1,7 +1,7 @@
 {
   "name": "@substrate-system/image",
   "description": "An image component",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "type": "module",
   "main": "dist/index.ts",
   "bin": {
