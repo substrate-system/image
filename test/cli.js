@@ -1,10 +1,10 @@
 // @ts-check
-import { test } from '@bicycle-codes/tapzero'
-import { execSync } from 'child_process'
+import { test } from '@substrate-system/tapzero'
+import { execSync } from 'node:child_process'
 import * as fs from 'node:fs'
 import path from 'node:path'
 import * as util from 'node:util'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const stat = util.promisify(fs.stat)

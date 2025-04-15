@@ -1,9 +1,9 @@
 // @ts-check
-import { test } from '@bicycle-codes/tapzero'
+import { test } from '@substrate-system/tapzero'
 import { Cloudinary } from '@cloudinary/url-gen'
-import { html } from '../dist/index.js'
 import { CloudinaryImage } from '../dist/cloudinary/index.js'
 import { CloudinarySrcset } from '../dist/cloudinary/srcset.js'
+import { html } from '../dist/index.js'
 
 const cld = new Cloudinary({
     cloud: { cloudName: 'nichoth' },

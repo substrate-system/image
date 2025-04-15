@@ -1,5 +1,5 @@
 {
-  "name": "@bicycle-codes/image",
+  "name": "@substrate-system/image",
   "description": "An image component",
   "version": "0.0.17",
   "type": "module",
@@ -26,12 +26,11 @@
     "prepublishOnly": "npm run build"
   },
   "directories": {
-    "doc": "docs",
     "example": "example",
     "test": "test"
   },
   "dependencies": {
-    "@bicycle-codes/tonic": "^16.0.2",
+    "@substrate-system/tonic": "^16.0.2",
     "@cloudinary/url-gen": "^1.14.0",
     "file-type": "^20.0.0",
     "preact": "^10.19.3",
@@ -39,7 +38,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@bicycle-codes/tapzero": "^0.10.0",
+    "@substrate-system/tapzero": "^0.10.13",
     "@types/yargs": "^17.0.24",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
@@ -92,13 +91,13 @@
     "preact"
   ],
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bicycle-codes/image.git"
+    "url": "git+https://github.com/substrate-system/image.git"
   },
   "bugs": {
-    "url": "https://github.com/bicycle-codes/image/issues"
+    "url": "https://github.com/substrate-system/image/issues"
   },
-  "homepage": "https://github.com/bicycle-codes/image#readme"
+  "homepage": "https://github.com/substrate-system/image"
 }
