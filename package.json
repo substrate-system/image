@@ -30,8 +30,8 @@
     "test": "test"
   },
   "dependencies": {
-    "@substrate-system/tonic": "^16.0.2",
     "@cloudinary/url-gen": "^1.14.0",
+    "@substrate-system/tonic": "^16.0.2",
     "file-type": "^20.0.0",
     "preact": "^10.19.3",
     "sharp": "^0.33.3",
@@ -52,8 +52,8 @@
     "postcss-nesting": "^13.0.0",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
-    "typescript": "^5.4.4",
-    "vite": "^6.0.1"
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6"
   },
   "exports": {
     ".": {

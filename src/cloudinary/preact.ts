@@ -21,7 +21,7 @@ interface Components {
  * @param config {{ cloudName:string }} The cloudName for Cloudinary
  * @returns { { Image:FunctionComponent } }
  */
-export const CloudinaryImage = function (config:{cloudName:string}):Components {
+export const CloudinaryImage = function (config:{ cloudName:string }):Components {
     const { cloudName } = config
 
     const cld = new Cloudinary({
