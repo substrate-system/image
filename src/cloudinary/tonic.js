@@ -5,9 +5,9 @@ import Tonic from '@substrate-system/tonic'
 import { CloudinarySrcset } from './srcset.js'
 
 /**
- * This is a factory function that returns an object like { Image },
- * where `Image` is a preact component
- * @param config {{ cloudName:string }} The cloudName for Cloudinary
+ * Factory function.
+ * where `Image` is a tonic component.
+ * @param {{ cloudName:string }} config The cloudName for Cloudinary
  * @returns { { BlurredImage, ImageTag } } Tonic components
  */
 export const CloudinaryTonic = function ({ cloudName }) {
