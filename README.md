@@ -378,10 +378,13 @@ const html = Image({
 
 
 ## base64 placeholders
-We need small base64 encoded strings to use as placeholder images for the blur up effect.
+We need small base64 encoded strings to use as placeholder images for the
+[blur up](https://css-tricks.com/the-blur-up-technique-for-loading-background-images/)
+effect.
 
 ### base64 CLI
-Use the CLI to generate a small base64 encoded image to use as a blurry placeholder while a better quality image downloads.
+Use the CLI to generate a small base64 encoded image to use as a blurry
+placeholder while a better quality image downloads.
 
 First install this locally
 ```bash
@@ -419,10 +422,14 @@ npx image.stringify my-cloud-name my-filename.jpg > ./my-filename.base64
 ```
 
 ### node
-Use the exported functions `getImgFile` and `getImgCloudinary` to create base64 encoded strings in node.
+Use the exported functions `getImgFile` and `getImgCloudinary` to create base64
+encoded strings in node.
 
 ```js
-import { getImgFile, getImgCloudinary } from '@substrate-system/image/bin/to-string'
+import {
+    getImgFile,
+    getImgCloudinary
+} from '@substrate-system/image/bin/to-string'
 
 const base64FromLocalFile = getImgFile('./file.jpg')
 
@@ -436,7 +443,9 @@ There's no CJS version of the base64 functions because I used top level `await`.
 -----------------------------------
 
 ## resizing images
-Create multiple resolutions of a single source image. This is suitable for the default resolution options that are created for the `srcset` attribute in the client side JS.
+Create multiple resolutions of a single source image. This is suitable for the
+default resolution options that are created for the `srcset` attribute in the
+client side JS.
 
 First install locally:
 ```bash
@@ -448,7 +457,9 @@ Then run via `npx`
 npx image.resize ./file.jpg --output ./output-dir
 ```
 
-This will create 4 files in the output directory -- `file-480.jpg`, `file-768.jpg`, `file-1024.jpg`, and `file.jpg`. It will copy the original file in addition to resizing it to new versions.
+This will create 4 files in the output directory --
+`file-480.jpg`, `file-768.jpg`, `file-1024.jpg`, and `file.jpg`.
+It will copy the original file in addition to resizing it to new versions.
 
 ### node
 Or use this in node
@@ -463,13 +474,16 @@ await resize('./my-file.jpg', './output-dir', defaultSizes)
  
 ## some links
 
-See this nice article for more information about images -- [A Guide to the Responsive Images Syntax in HTML](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)
+See this nice article for more information about
+images -- [A Guide to the Responsive Images Syntax in HTML](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset)
 
 [bholmes.dev -- Picture perfect image optimization](https://bholmes.dev/blog/picture-perfect-image-optimization/)
 
-This project also includes tools to help with the ["Blur Up" technique](https://css-tricks.com/the-blur-up-technique-for-loading-background-images/), which means creating a nice blurred placeholder image while a high resolution image downloads, then switching them out, so the high res image is visible when it's ready
+This project also includes tools to help with
+the ["Blur Up" technique](https://css-tricks.com/the-blur-up-technique-for-loading-background-images/), which means creating a nice blurred placeholder image while a high resolution image downloads, then switching them out, so the high res image is visible when it's ready
 
-See [the section on the CLI](#base64-placeholders) for info on creating base64 strings of images.
+See [the section on the CLI](#base64-placeholders) for info on creating base64
+strings of images.
 
 [A guide to getting the dominant color](https://manu.ninja/dominant-colors-for-lazy-loading-images/)
 
@@ -486,36 +500,47 @@ See [the section on the CLI](#base64-placeholders) for info on creating base64 s
 
 [Responsive Images: If you’re just changing resolutions, use srcset.](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/#aa-also-sizes)
 
-> It’s actually not that bad to just leave it off. In that case, it assumes sizes="100vw"
+> It’s actually not that bad to just leave it off. In that case,
+> it assumes sizes="100vw"
 
 https://bholmes.dev/blog/picture-perfect-image-optimization/#link-the-sizes-attribute
 
-> In general, the sizes attribute is a way to tell the browser which image to use for a given screen size.
+> In general, the sizes attribute is a way to tell the browser which image to
+> use for a given screen size.
 
-> our image is 100vw (100% screen width) below 500px, and 50vw when we hit `@media (min-width: 500px)`. This perfectly translates to sizes 👉 `sizes="(min-width: 500px) 50vw, 100vw"` 
+> our image is 100vw (100% screen width) below 500px, and 50vw when we
+> hit `@media (min-width: 500px)`. This perfectly translates to sizes 👉 `sizes="(min-width: 500px) 50vw, 100vw"` 
 
 ### better performace
-If your only goal is improved performance, then use an `img` tag with `srcset` and `sizes` attributes.
+If your only goal is improved performance, then use an `img` tag with `srcset`
+and `sizes` attributes.
 
 ### format
-Use the `picture` element to choose different files based on a media query or browser support, or for art direction purposes.
+Use the `picture` element to choose different files based on a media query or
+browser support, or for art direction purposes.
 
-> For example, cropping an image differently depending on the size of the screen and differences in the layout.
+> For example, cropping an image differently depending on the size of the
+> screen and differences in the layout.
 
 ### `srcset` + `sizes`
 
-`srcset` is a comma separated list of values, telling the browser which image size to download. `src` is a fallback if the browser does not understand `srcset`.
+`srcset` is a comma separated list of values, telling the browser which image
+size to download. `src` is a fallback if the browser does not understand `srcset`.
 
 [Resolution Switching](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes)
 > srcset defines the set of images we will allow the browser to choose between
 
-You can use a value like `filename.jpg 2x` (with an `x` descriptor) to tell the browser about different files based on pixel denxity. If it is on a high-res screen, it can download the `2x` version.
+You can use a value like `filename.jpg 2x` (with an `x` descriptor) to tell
+the browser about different files based on pixel denxity. If it is on a high-res
+screen, it can download the `2x` version.
 
 Use `srcset` with `sizes` to let the browser choose based on page layout.
 
 #### w descriptors
 
-> The sizes attribute describes the width that the image will display within the layout of your specific site. The width that images render at is layout-dependent rather than just viewport dependent.
+> The sizes attribute describes the width that the image will display within
+the layout of your specific site. The width that images render at is
+layout-dependent rather than just viewport dependent.
 
 #### [sizes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#sizes)
 Contain two things:
@@ -525,15 +550,21 @@ Contain two things:
 
 [see sizes here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes)
 
-> sizes defines a set of media conditions (e.g. screen widths) and indicates what image size would be best to choose
+> sizes defines a set of media conditions (e.g. screen widths) and indicates
+> what image size would be best to choose
 
-> Media Conditions describe properties of the viewport, not of the image. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the viewport is not higher than 500px.
+> Media Conditions describe properties of the viewport, not of the image.
+> For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px
+> width, if the viewport is not higher than 500px.
 
 So `sizes` tells us which image to choose based on screen size.
 
-`srcset` tells us different images that are available to choose from. The browser can use a variety of criteria to choose an image, like bandwidth cost in addition to screen size.
+`srcset` tells us different images that are available to choose from. The
+browser can use a variety of criteria to choose an image, like bandwidth cost
+in addition to screen size.
 
-> If the srcset attribute uses width descriptors, the sizes attribute must also be present, or the srcset itself will be ignored.
+> If the srcset attribute uses width descriptors, the sizes attribute must also
+> be present, or the srcset itself will be ignored.
 
 -------
 
