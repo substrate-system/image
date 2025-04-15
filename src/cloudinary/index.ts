@@ -1,5 +1,5 @@
 import { Cloudinary } from '@cloudinary/url-gen'
-import { Props } from '../attributes'
+import { type Props } from '../attributes.js'
 import { CloudinarySrcset } from './srcset.js'
 
 //

@@ -1,9 +1,9 @@
 import { Cloudinary } from '@cloudinary/url-gen'
 import { scale } from '@cloudinary/url-gen/actions/resize'
-import { h, FunctionComponent } from 'preact'
+import { h, type FunctionComponent } from 'preact'
 import { useRef, useEffect } from 'preact/hooks'
 import { CloudinarySrcset } from './srcset.js'
-import { Props } from '../attributes.js'
+import { type Props } from '../attributes.js'
 
 interface BlurProps extends Props {
     blurPlaceholder:string,

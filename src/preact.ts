@@ -1,6 +1,6 @@
-import { h, FunctionComponent } from 'preact'
+import { h, type FunctionComponent } from 'preact'
 import { useRef, useEffect } from 'preact/hooks'
-import { Props } from './attributes.js'
+import { type Props } from './attributes.js'
 import { defaultSrcset, getSrcset } from './srcset.js'
 
 //

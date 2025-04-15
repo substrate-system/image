@@ -1,4 +1,4 @@
-import { Props } from './attributes.js'
+import { type Props } from './attributes.js'
 import { getSrcset, defaultSizes } from './srcset.js'
 
 export function html (props:Props):string {
