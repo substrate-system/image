@@ -1,7 +1,7 @@
 // @ts-check
 import { Cloudinary } from '@cloudinary/url-gen'
 import { scale } from '@cloudinary/url-gen/actions/resize'
-import Tonic from '@bicycle-codes/tonic'
+import Tonic from '@substrate-system/tonic'
 import { CloudinarySrcset } from './srcset.js'
 
 /**

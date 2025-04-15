@@ -1,5 +1,5 @@
 // @ts-check
-import Tonic from '@bicycle-codes/tonic'
+import Tonic from '@substrate-system/tonic'
 import { defaultSrcset, getSrcset } from './srcset.js'
 
 /**
