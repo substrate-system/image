@@ -3,6 +3,4 @@ bundle.js
 .DS_Store
 dist
 example/node_modules
-example/100-*.jpg
-package-lock.json
 example/public
