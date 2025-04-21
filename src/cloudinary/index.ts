@@ -23,19 +23,17 @@ export function CloudinaryImage (cloudName) {
 
         const { defaultSrcset, getSrcset } = CloudinarySrcset(cld)
 
-        return `<div class="${'image' + (_class ? ` ${_class}` : '')}">
-            <img
-                alt="${alt}"
-                srcset: ${(srcset ?
-                    getSrcset(filename, srcset).join(', ') :
-                    defaultSrcset(filename))
-                }
-                sizes="${sizes?.join(', ') || '100vw'}"
-                src="${cld.image(filename).format('auto').quality('auto').toURL()}"
-                decoding="${decoding || 'auto'}"
-                loading="${loading || 'lazy'}"
-                fetchpriority="${fetchpriority || 'low'}"
-            >
-        </div>`
+        return `<img
+            alt="${alt}"
+            srcset: ${(srcset ?
+                getSrcset(filename, srcset).join(', ') :
+                defaultSrcset(filename))
+            }
+            sizes="${sizes?.join(', ') || '100vw'}"
+            src="${cld.image(filename).format('auto').quality('auto').toURL()}"
+            decoding="${decoding || 'auto'}"
+            loading="${loading || 'lazy'}"
+            fetchpriority="${fetchpriority || 'low'}"
+        >`
     }
 }
