@@ -35,7 +35,6 @@ export const CloudinaryImage = function (config:{ cloudName:string }):Components
         const { decoding, filename, alt, loading, fetchpriority,
             className, srcset, sizes } = props
 
-        // @ts-expect-error ???
         return h('img', {
             class: props.class || className,
             alt,

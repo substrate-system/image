@@ -33,7 +33,7 @@
     "@cloudinary/url-gen": "^1.14.0",
     "@substrate-system/tonic": "^16.0.2",
     "file-type": "^20.0.0",
-    "preact": "^10.19.3",
+    "preact": "^10.26.5",
     "sharp": "^0.34.1",
     "yargs": "^17.7.2"
   },
