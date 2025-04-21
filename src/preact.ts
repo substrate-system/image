@@ -23,7 +23,6 @@ export const Image:FunctionComponent<Props> = function (config:Props) {
 
     // const defaultSizes = [1024, 768, 480]
 
-    // @ts-expect-error ???
     return h('img', {
         class: config.class || className,
         srcset: (srcset ?
