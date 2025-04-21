@@ -30,7 +30,7 @@
     "test": "test"
   },
   "dependencies": {
-    "@cloudinary/url-gen": "^1.14.0",
+    "@cloudinary/url-gen": "^1.21.0",
     "@substrate-system/tonic": "^16.0.2",
     "file-type": "^20.0.0",
     "preact": "^10.26.5",

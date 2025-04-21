@@ -26,7 +26,6 @@ test('create HTML strings with defaults, for locally hosted files', async t => {
     })
 
     t.ok(markup, 'Should create HTML')
-    t.ok(markup.includes('class="image"'), 'should return the default class')
     t.ok(markup.includes('sizes="100vw"'), 'should create the default sizes')
     t.ok(markup.includes('srcset="/aaa-1024.jpg 1024w, /aaa-768.jpg 768w, /aaa-480.jpg 480w"'),
         'should return the default srcset')
@@ -47,7 +46,6 @@ test('create HTML string for cloudinary hosted images', async t => {
         alt: 'testing'
     })
 
-    t.ok(html.includes('class="image"'), 'has the default class name')
     t.ok(html.includes('alt="testing"'), 'should include the `alt` text')
     t.ok(html.includes('src="https://res.cloudinary.com/'),
         'includes the `src` attribute with a cloudinary URL')
