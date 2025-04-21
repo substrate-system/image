@@ -24,6 +24,7 @@ export function CloudinaryImage (cloudName) {
         const { defaultSrcset, getSrcset } = CloudinarySrcset(cld)
 
         return `<img
+            ${_class ? `class=${_class}` : ''}
             alt="${alt}"
             srcset: ${(srcset ?
                 getSrcset(filename, srcset).join(', ') :
