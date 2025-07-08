@@ -1,5 +1,6 @@
 import { type Props } from './attributes.js'
-import { getSrcset, defaultSizes } from './srcset.js'
+import { getSrcset } from './srcset.js'
+import { defaultSizes } from './attributes.js'
 
 export function html (props:Props):string {
     const { className, sizes, filename, decoding,

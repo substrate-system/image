@@ -1,4 +1,4 @@
-export const defaultSizes = [1024, 768, 480]
+import { defaultSizes } from './attributes.js'
 
 export function defaultSrcset (filename:string):string {
     const URIs:string = getSrcset(filename, defaultSizes)
