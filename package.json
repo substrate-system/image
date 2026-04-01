@@ -52,7 +52,7 @@
     "postcss-nesting": "^14.0.0",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
-    "typescript": "^5.8.3",
+    "typescript": "^6.0.2",
     "vite": "^7.1.4"
   },
   "exports": {
