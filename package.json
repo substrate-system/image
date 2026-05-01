@@ -32,7 +32,7 @@
   "dependencies": {
     "@cloudinary/url-gen": "^1.21.0",
     "@substrate-system/tonic": "^17.0.0",
-    "file-type": "^21.0.0",
+    "file-type": "^22.0.1",
     "preact": "^10.26.5",
     "sharp": "^0.34.1",
     "yargs": "^18.0.0"
